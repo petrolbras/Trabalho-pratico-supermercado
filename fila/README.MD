@@ -8,6 +8,8 @@ Um exemplo é adicionar cliente para um caixa disponível, esse cliente será at
 
 Para compilar e rodar utilize: 
 
-1 - Para compilar os arquivos base -> make
-2 - Para rodar o arquivo criado -> make run
-3 - Para limpar - make clean
+1 - Para compilar os arquivos base -> make;
+
+2 - Para rodar o arquivo criado -> make run;
+
+3 - Para limpar - make clean.
