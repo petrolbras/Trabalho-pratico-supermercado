@@ -4,13 +4,18 @@
 #include <stdbool.h>
 
 #define MAX_NOME 20
+#define MAX_PRODUTOS 10
 #define MAX_CLIENTES 5
 
 typedef struct {
+    int quantidade;
+    int id;
     char nome[MAX_NOME];
-    //produtos (não será implementado agora)
+} produto;
+typedef struct {
+    char nome[MAX_NOME];
+    produto produtos[MAX_PRODUTOS];
 } Cliente;
-
 typedef struct {
     Cliente clientes[MAX_CLIENTES];
     int inicio;
@@ -28,15 +33,17 @@ typedef struct {
 
 bool fila_init(Fila *f);
 
+bool fila_isfull(Fila *f);
+
+bool fila_vazia(Fila *f);
+
 bool fila_enqueue(Fila *f, Cliente *c);
 
 bool fila_dequeue(Fila *f, Cliente *c);
 
 bool fila_top(Fila *f, Cliente *c);
 
-bool fila_tamanho(Fila *f);
-
-bool fila_vazia(Fila *f);
+int fila_tamanho(Fila *f);
 
 void imprimir_fila (Fila *f);
 
