@@ -5,7 +5,8 @@
 
 #define MAX_NOME 20
 #define MAX_PRODUTOS 10
-#define MAX_CLIENTES 5
+#define MAX_CLIENTES_FILA 5
+#define MAX_AUX 20
 
 typedef struct {
     int quantidade;
@@ -17,19 +18,11 @@ typedef struct {
     produto produtos[MAX_PRODUTOS];
 } Cliente;
 typedef struct {
-    Cliente clientes[MAX_CLIENTES];
+    Cliente clientes[MAX_CLIENTES_FILA];
     int inicio;
     int fim;
     int tamanho;
 } Fila;
-
-typedef struct {
-    bool aberto;
-    bool atendendo;
-    Fila fila;
-    Cliente atual;
-    int id;
-} Caixa;
 
 bool fila_init(Fila *f);
 
