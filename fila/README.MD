@@ -6,6 +6,8 @@ Algo importante de se ressaltar é que nossos clientes estão dentro de um vetor
  
 Um exemplo é inicializar o mercado através das funções disponibilizadas que, também, acaba iniciando os caixas. Após isso, você pode criar clientes e, através do enqueue, colocá-los na fila de certos caixas. Depois, usar a função de atender_caixa para atender esses clientes (lembrando que essa função só atende o primeiro cliente, isto é, o que foi inserido primeiro na fila) e assim o sistema de mercado funciona.
 
+# NOTA -> Tivemos que adicionar mercado.c e mercado.h para fazer nosso projeto funcionar já que, como estamos desenvolvendo um projeto de supermercado, decidimos separar algumas funções no arquivo "mercado.c" exclusivamente para o comportamento dos caixas que utilizam as operações de filas implementadas em "fila.c"
+
 Para compilar e rodar utilize: 
 
 1 - Para compilar os arquivos base -> make;
